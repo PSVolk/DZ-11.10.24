@@ -1,0 +1,15 @@
+Представление отображает названия всех исполнителей
+CREATE VIEW [ArtistsName] AS
+SELECT ArtistID
+FROM Artist
+;
+Представление отображает полную информацию о всех песнях: название песни, название диска, длительность песни, музыкальный стиль песни, исполнитель;
+CREATE VIEW [Tracks] AS
+SELECT TrackID
+FROM Track, Disc, Style, Artist
+;
+Представление отображает информацию о музыкальных дисках конкретной группы
+CREATE VIEW [Beatles Artist] AS
+SELECT DiscID
+FROM Disc
+WHERE Artist = 'Beatles';
